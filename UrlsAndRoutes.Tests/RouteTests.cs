@@ -113,12 +113,13 @@ namespace UrlsAndRoutes.Tests
         [TestMethod]
         public void Test_For_Too_Many_Segments()
         {
-            // This should pass with 3 segments but fails as this url is still routeable!...
+            // This should pass with 3 segments but fails
+            // as this url is still routeable!...
             // ...due to the extra segment being assigned to id parameter..."
             // Add 4 however and the test passes....
-            TestRouteFail("~/Admin/Index/Id/Segment");
-            TestRouteFail("~/Home/Index/Id/Segment");
-            TestRouteFail("~/Customer/Index/Id/Segment");
+            TestRouteFail("~/Admin/Index/IdSegment/Segment");
+            TestRouteFail("~/Home/Index/IdSegment/Segment");
+            TestRouteFail("~/Customer/Index/IdSegment/Segment");
         }
 
         [TestMethod]
