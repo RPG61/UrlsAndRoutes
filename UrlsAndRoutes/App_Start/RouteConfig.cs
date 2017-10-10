@@ -9,6 +9,9 @@ namespace UrlsAndRoutes
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Route with static segment X
+            routes.MapRoute("", "X{controller}/{action}", new { controller = "Home"});
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
